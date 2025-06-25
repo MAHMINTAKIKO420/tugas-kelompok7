@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gojek Simulasi - Kelompok 7</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="login-box">
+    <h2>Login dulu Nyong Jangan Lupa</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <div id="login-error"></div>
+  </div>
+
+  <div class="container" id="main-app" style="display: none;">
+    <h1>Selamat Datang di Gajek Simulasi</h1>
+    <button onclick="showSection('ride')">🚕 Pesan Ojek</button>
+    <button onclick="showSection('food')">🍔 Pesan Makanan</button>
+
+    <div id="ride-section" class="feature-section">
+      <h2>Ini Kalo Lu Butuh Ojek Ye</h2>
+      <input type="text" id="pickup" placeholder="Lokasi Jemput" />
+      <input type="text" id="destination" placeholder="Tujuan" />
+      <button onclick="cariDriver()">Cari Driver</button>
+      <div id="ride-result"></div>
+    </div>
+
+    <div id="food-section" class="feature-section" style="display: none;">
+      <h2>Ini Buat Pesen Makanan Nyong</h2>
+      <select id="menu">
+        <option value="Nasi Goreng">Nasi Goreng - Rp20.000</option>
+        <option value="Ayam Geprek">Ayam Geprek - Rp25.000</option>
+        <option value="Es Teh Manis">Es Teh Manis - Rp5.000</option>
+      </select>
+      <input type="number" id="qty" placeholder="Jumlah" min="1" value="1" />
+      <button onclick="pesanMakanan()">Pesan</button>
+      <div id="food-result"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
